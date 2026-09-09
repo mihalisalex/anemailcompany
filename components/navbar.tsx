@@ -8,6 +8,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 const navItems = [
   { label: "Υπηρεσίες", href: "#services" },
+  { label: "Ποιοι είμαστε", href: "#team" },
   { label: "Προσέγγιση", href: "#process" },
   { label: "Δυνατότητες", href: "#work" },
   { label: "Clients", href: "#clients" },

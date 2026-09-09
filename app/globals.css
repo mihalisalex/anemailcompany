@@ -245,6 +245,63 @@
   animation: draw-line 2s ease-out forwards;
 }
 
+/* Rotating holo-gradient border for team cards */
+@keyframes holo-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-holo-spin {
+  animation: holo-spin 5s linear infinite;
+}
+
+/* Vertical scan sweep inside team cards */
+@keyframes scan-sweep {
+  0% {
+    transform: translateY(-120%);
+  }
+  100% {
+    transform: translateY(220%);
+  }
+}
+
+.animate-scan-sweep {
+  animation: scan-sweep 2.8s ease-in-out infinite;
+}
+
+/* Terminal-style glitch flicker on hover */
+@keyframes glitch-flicker {
+  0%, 88%, 100% {
+    opacity: 1;
+    transform: translateX(0);
+    text-shadow: none;
+  }
+  90% {
+    opacity: .7;
+    transform: translateX(-2px);
+    text-shadow: -2px 0 oklch(0.78 0.17 225 / .8), 2px 0 oklch(0.68 0.24 292 / .8);
+  }
+  92% {
+    opacity: 1;
+    transform: translateX(2px);
+    text-shadow: 2px 0 oklch(0.68 0.24 292 / .7);
+  }
+  94% {
+    opacity: .8;
+    transform: translateX(-1px);
+    text-shadow: none;
+  }
+  96%, 100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.group:hover .glitch-name {
+  animation: glitch-flicker 1.4s steps(2) infinite;
+}
+
 @media (max-width: 640px) {
   body {
     overflow-x: hidden;
