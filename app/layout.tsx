@@ -18,6 +18,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="el" suppressHydrationWarning>
       <body className={`${manrope.variable} ${baloo.variable} font-sans antialiased`}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{if(!localStorage.getItem("theme")){var h=new Date().getHours();localStorage.setItem("theme",(h>=18||h<6)?"dark":"light")}}catch(e){}})();`,
+          }}
+        />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange={false}>
           <div className="noise-overlay" aria-hidden="true" />
           {children}
