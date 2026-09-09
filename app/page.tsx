@@ -10,5 +10,5 @@ import { FinalCTA } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
-  return <SmoothScroll><main className="min-h-screen bg-zinc-950"><Navbar /><Hero /><LogoMarquee /><BentoGrid /><ClientShowcase /><ToolsStack /><Pricing /><FinalCTA /><Footer /></main></SmoothScroll>
+  return <SmoothScroll><main className="min-h-screen bg-white dark:bg-zinc-950"><Navbar /><Hero /><LogoMarquee /><BentoGrid /><ClientShowcase /><ToolsStack /><Pricing /><FinalCTA /><Footer /></main></SmoothScroll>
 }

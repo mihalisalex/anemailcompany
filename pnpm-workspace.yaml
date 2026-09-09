@@ -1,0 +1,5 @@
+allowBuilds:
+  sharp: true
+overrides:
+  electron-to-chromium: 1.5.423
+  ignore: 7.0.8
