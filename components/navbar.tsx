@@ -8,12 +8,14 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 const navItems = [
   { label: "Υπηρεσίες", href: "#services" },
-  { label: "Ποιοι είμαστε", href: "#team" },
+  { label: "Εμείς", href: "#team" },
   { label: "Προσέγγιση", href: "#process" },
   { label: "Δυνατότητες", href: "#work" },
   { label: "Clients", href: "#clients" },
   { label: "Stack", href: "#tools" },
 ]
+
+const desktopNavItems = navItems.filter((item) => item.label !== "Δυνατότητες")
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -25,10 +27,9 @@ export function Navbar() {
           <span className="font-[family-name:var(--font-baloo)] text-lg font-extrabold tracking-tight">an email company.</span>
         </a>
         <div className="hidden md:flex items-center gap-1">
-          {navItems.map((item) => <a key={item.label} href={item.href} className="px-4 py-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">{item.label}</a>)}
+          {desktopNavItems.map((item) => <a key={item.label} href={item.href} className="px-4 py-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">{item.label}</a>)}
         </div>
         <div className="hidden md:flex items-center gap-3">
-          <a href="#contact" className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Μίλησέ μας</a>
           <ThemeToggle />
           <Button asChild size="sm" className="bg-cyan-300 text-zinc-950 hover:bg-violet-300 rounded-full px-4"><a href="#contact">Ξεκίνα ένα project <ArrowUpRight className="ml-1 h-3.5 w-3.5" /></a></Button>
         </div>
